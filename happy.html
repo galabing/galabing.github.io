@@ -5,9 +5,7 @@
 
 <style>
 body {
-  background-image: url(outside.jpg);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  background-color: black;
 }
 
 .container {
@@ -25,6 +23,10 @@ body {
   color: white;
 }
 
+.hide {
+  color: black;
+}
+
 a {
   color: white;
 }
@@ -32,12 +34,21 @@ a {
 
 <div class="container">
   <div class="tangerine">
-    once upon a time, Da Bing prepared an awesome present for Bu<br/>
-    but he hid it away in a castle<br/>
-    in the highest room of the tallest tower<br/>
-    and Bu must overcome many obstacles to retrieve it<br/>
+    you arrived at the castle<br/>
+    but the gate is locked<br/>
+    to enter<br/>
+    you must provide the correct sequence of passcodes<br/>
     <br/>
-    <a href="happy.html">begin the journey</a>
+    <span class="hide">1</span>,
+    <span class="hide">1</span>,
+    <span class="hide">2</span>,
+    <span class="hide">3</span>,
+    <input id="n1" type="text" maxlength="2"/>,
+    <span class="hide">8</span>,
+    <input id="n1" type="text" maxlength="2"/>,
+    <input id="n1" type="text" maxlength="2"/>,
+    <span class="hide">34</span>
+    <a href="birthday.html">open</a>
   </div>
 </div>
 
