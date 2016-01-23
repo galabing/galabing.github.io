@@ -23,6 +23,12 @@ body {
   color: white;
 }
 
+.tangerine-msg {
+  font-family: 'Tangerine', cursive;
+  font-size: 200%;
+  color: red;
+}
+
 .hide {
   color: black;
 }
@@ -31,6 +37,24 @@ a {
   color: white;
 }
 </style>
+
+<script>
+function check() {
+  var n1 = document.getElementById("n1").value;
+  var n2 = document.getElementById("n2").value;
+  var n3 = document.getElementById("n3").value;
+  if (isNaN(n1)
+      || n1 != 5
+      || isNaN(n2)
+      || n2 != 13
+      || isNaN(n3)
+      || n3 != 21) {
+    document.getElementById("err").innerHTML = "Wrong passcode!";
+    return false;
+  }
+  return true;
+}
+</script>
 
 <div class="container">
   <div class="tangerine">
@@ -45,11 +69,13 @@ a {
     <span class="hide">3</span>,&nbsp;
     <input id="n1" type="text" size="2" maxlength="2"/>,&nbsp;
     <span class="hide">8</span>,&nbsp;
-    <input id="n1" type="text" size="2" maxlength="2"/>,&nbsp;
-    <input id="n1" type="text" size="2" maxlength="2"/>,&nbsp;
+    <input id="n2" type="text" size="2" maxlength="2"/>,&nbsp;
+    <input id="n3" type="text" size="2" maxlength="2"/>,&nbsp;
     <span class="hide">34</span>
     &nbsp;&nbsp;
-    <a href="birthday.html">open</a>
+    <a href="birthday.html" onclick="return check();">open</a>
+    &nbsp;&nbsp;
+    <span id="err" class="tangerine-msg"></span>
   </div>
 </div>
 
