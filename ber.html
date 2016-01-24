@@ -19,7 +19,7 @@ body {
 
 .tangerine {
   font-family: 'Tangerine', cursive;
-  font-size: 200%;
+  font-size: 400%;
   color: white;
 }
 
@@ -38,31 +38,21 @@ a {
 
 <script>
 function check() {
-  var n1 = document.getElementById("n1").value;
-  var n2 = document.getElementById("n2").value;
-  if (n1.toUpperCase() == "ROLL"
-      && n2.toUpperCase() == "OVER") {
-    return true;
+  if (!document.getElementById("hell").checked) {
+    document.getElementById("err").innerHTML = "WTF?";
+    return false;
   }
-  document.getElementById("err").innerHTML = "Wrong phrase!";
-  return false;
+  return true;
 }
 </script>
 
-<img src="d1final.jpg" alt="DUSTY"/>
 <div class="container">
   <div class="tangerine">
-    the name is DUSTY!<br/>
-    greatest guard dog with no mercy<br/>
-    your only chance lies in<br/>
-    diverting him with his favorite treat<br/>
-    and say the two magic words<br/>
-    with four letters each<br/>
+    Will you marry Da Bing?<br/>
+    <input id="hell" type="radio" name="q1"/> hell yeah!<br/>
+    <input id="sure" type="radio" name="q1"/> sure<br/>
     <br/>
-    <input id="n1" type="text" size="4" maxlength="4"/>&nbsp;
-    <input id="n2" type="text" size="4" maxlength="4"/>
-    &nbsp;&nbsp;
-    <a href="love.html" onclick="return check();">say it</a>
+    <a href="end.html" onclick="return check();">answer</a>
     &nbsp;&nbsp;
     <span id="err" class="msg"></span>
   </div>
